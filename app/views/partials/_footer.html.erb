@@ -1,48 +1,43 @@
 <% cache do %>
-<footer>
-  <div class='body'>
-    <div class='container'>
+  <footer>
+    <div class='body'>
+      <div class='container'>
+        <div class='row'>
+          <% if(current_page?(root_path)) %>
+            <div class='hidden-xs col-md-2 col-sm-2 col-lg-2'></div>
+          <% else %>
+            <div class='hidden-xs col-md-3 col-sm-3 col-lg-3 clearfix search'>
+              <%= render partial: 'partials/search_form'  %>
+              <%= link_to('Cavada Aleatória', aleatorio_path, class: 'btn btn-default btn-sm') %>
+            </div>
+          <% end %>
 
-      <div class='row'>
-
-        <% if(current_page?(root_path)) %>
-          <div class='col-md-2 col-sm-6'></div>
-        <% else %>
-          <div class='col-md-5 col-sm-6 clearfix search'>
-            <%= render partial: 'partials/search_form'  %>
-            <%= link_to('Cavada Aleatória', aleatorio_path, class: 'btn btn-default btn-sm') %>
+          <div class='col-xs-6 col-md-3 col-sm-3 col-lg-3 clearfix'>
+            <h4>Menu</h4>
+            <ul>
+              <%= render partial: 'partials/common_links' %>
+            </ul>
           </div>
-        <% end %>
 
+          <div class='col-xs-6 col-md-3 col-sm-3 col-lg-3 clearfix social'>
+            <h4>Junte-se a nós</h4>
+            <iframe
+              src="https://ghbtns.com/github-btn.html?user=teresinahc&repo=peba&type=fork&count=true"
+              frameborder="0"
+              scrolling="0"
+              width="170px"
+              height="20px">
+            </iframe>
 
-        <div class='col-md-3 col-sm-6 clearfix'>
-          <h4>Menu</h4>
-          <ul>
-            <%= render partial: 'partials/common_links' %>
-          </ul>
+            <%= render partial: 'partials/social', locals: {url: root_url, description: app_description } %>
+          </div>
+
+          <div id="realization" class='text-center col-xs-12 col-md-3 col-sm-3 col-lg-3 clearfix'>
+            <h4>Realização</h4>
+            <%= link_to(image_tag('teresinahc.png', width: 80), 'http://teresinahc.org', title: 'Teresina Hacker Club') %>
+          </div>
         </div>
-
-        <div class='col-md-3 col-sm-6 clearfix social'>
-          <h4>Junte-se a nós</h4>
-          <iframe
-            src="https://ghbtns.com/github-btn.html?user=teresinahc&repo=peba&type=fork&count=true"
-            frameborder="0"
-            scrolling="0"
-            width="170px"
-            height="20px">
-          </iframe>
-
-          <%= render partial: 'partials/social', locals: {url: root_url, description: app_description } %>
-        </div>
-
-        <div class='col-md-1 col-sm-6 clearfix'>
-          <h4>Realização</h4>
-          <%= link_to(image_tag('teresinahc.png', width: 80), 'http://teresinahc.org', title: 'Teresina Hacker Club') %>
-        </div>
-
       </div>
     </div>
-  </div>
-</footer>
-
+  </footer>
 <% end %>

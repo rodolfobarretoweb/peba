@@ -18,6 +18,38 @@
   .navbar-brand img { width: 50px; }
 }
 
+@media (max-width: 768px) {
+  .navbar-toggle{
+    z-index: 1000;
+    position: absolute;
+    right: 0;
+    border: none !important;
+  }
+
+  .navbar-toggle:hover, .navbar-toggle:focus {
+    background:none !important;
+  }
+
+  .navbar-toggle {
+    .icon-bar {
+      background-color:#fff !important;
+    }
+  }
+
+  .navbar-collapse {
+    border-top: none;
+    position: absolute;
+    left:0;
+    right:0;
+
+    .navbar-nav {
+      margin:0px !important;
+      background-color: rgba(0,0,0,.6);
+      padding-bottom: 10px;
+    }
+  }
+}
+
 .jumbotron {
   background: $pattern-background !important;
   color: white;

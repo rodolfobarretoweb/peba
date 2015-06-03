@@ -12,6 +12,8 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require bootstrap/transition
+//= require bootstrap/collapse
 //= require highcharts
 //= require highcharts/highcharts-more
 //= require highcharts/modules/exporting

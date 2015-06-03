@@ -57,4 +57,10 @@ footer {
     font-size: 1.1rem;
     color: rgba(255,255,255,.8);
   }
+
+  @media (max-width: 768px) {
+    #realization {
+      margin-top:15px;
+    }
+  }
 }
